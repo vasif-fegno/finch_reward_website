@@ -1,0 +1,139 @@
+/* Finch light theme: warm ivory and parchment, deep ink type, deeper gold, soft warm shadows.
+   Physical objects (metal cards, phone mock-ups, dashboard, coin) keep their own dark finish. */
+html[data-finch=light]{--ink:#f6f1e7;--ink2:#efe7d7;--ink3:#e6dcc8;--line:rgba(140,100,40,.24);--line2:rgba(60,40,10,.1);--gold:#a3722a;--gold2:#7d5419;--gold3:#c79a4f;--cream:#1e1810;--mute:#5f5443;
+  --foil:linear-gradient(105deg,#8a5f1f 0%,#c99a4a 28%,#a3722a 50%,#d8b06a 68%,#8a5f1f 100%);--shadow:0 24px 56px rgba(80,55,20,.16),0 4px 14px rgba(80,55,20,.08);color-scheme:light}
+/* dark "islands": objects that keep the dark palette */
+html[data-finch=light] :is(.mcard,.tcard,.dash,.tk,.hc){--ink:#0b0a08;--ink2:#12100c;--line:rgba(232,190,110,.2);--line2:rgba(255,255,255,.09);--gold:#e8b45a;--gold2:#f6dca4;--gold3:#a87a35;--cream:#f5eee0;--mute:#b0a896;--foil:linear-gradient(105deg,#a87a35 0%,#f6dca4 28%,#e8b45a 50%,#fff1cc 68%,#a87a35 100%)}
+html[data-finch=light] :is(.mcard,.tcard){color:#f5eee0;box-shadow:0 30px 60px rgba(70,45,10,.28),0 6px 16px rgba(70,45,10,.14)!important}
+html[data-finch=light] .phone{background:linear-gradient(145deg,#ecd9b0,#b98f4c 32%,#f4e6c8 62%,#a87a3a);box-shadow:0 40px 80px rgba(70,45,10,.22),0 8px 20px rgba(70,45,10,.1)}
+html[data-finch=light] .scr{background:#fcf8f0;color:var(--cream)}
+html[data-finch=light] .scr:before{background:#1e1810}
+html[data-finch=light] .scr .bal{background:linear-gradient(135deg,rgba(199,154,79,.22),rgba(255,255,255,.4));border-color:var(--line)}
+html[data-finch=light] .scr .bal b{color:var(--gold2)}
+html[data-finch=light] .scr .qr{background:conic-gradient(#1e1810 25%,#fcf8f0 0 50%,#1e1810 0 75%,#fcf8f0 0) 0 0/13% 13%;border-color:#1e1810}
+html[data-finch=light] :is(.way span:first-child,.nt){color:#fffaf0}
+html[data-finch=light] .fld{background:#fff}
+html[data-finch=light] .tg{background:rgba(60,40,10,.14)}html[data-finch=light] .tg:after{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)}html[data-finch=light] .tg.on{background:var(--gold)}
+html[data-finch=light] .scr .li{border-color:var(--line2)}
+html[data-finch=light] .dash{box-shadow:var(--shadow)}
+
+/* surfaces */
+html[data-finch=light] body{background:var(--ink)}
+html[data-finch=light] .nav.on{background:rgba(250,246,238,.95);border-color:var(--line)}
+html[data-finch=light] .drop{background:#fbf8f1;box-shadow:var(--shadow)}
+html[data-finch=light] .veil,html[data-finch=light] .curtain:before,html[data-finch=light] .curtain:after{background:var(--ink)}
+@media(max-width:1020px){html[data-finch=light] .menu{background:radial-gradient(90% 45% at 50% 100%,rgba(199,154,79,.18),transparent 70%),#f6f1e7}}
+html[data-finch=light] .cell:hover{background:#fbf7ef}
+html[data-finch=light] .stick.dark{background:radial-gradient(70% 70% at 50% 50%,#fffaf1,#efe6d4)}
+html[data-finch=light] .year{background:linear-gradient(180deg,var(--ink),var(--ink2) 50%,var(--ink))}
+html[data-finch=light] :is(.ygrid div,.tl-stats div){background:#fffcf6}
+html[data-finch=light] .ygrid .dim strong{color:#b5aa96}
+html[data-finch=light] :is(.hud,.snd,.totop,.po-w){background:rgba(255,252,246,.96);box-shadow:var(--shadow)}
+html[data-finch=light] .store{background:rgba(255,255,255,.7);box-shadow:0 6px 18px rgba(80,55,20,.08)}
+html[data-finch=light] :is(input,select,textarea){background:#fffdf8}
+html[data-finch=light] select option{background:#fffdf8}
+html[data-finch=light] footer{background:#ece3d2}
+html[data-finch=light] .bm i{background:#fffaf2}
+html[data-finch=light] .oc{background:#ece4d4;color:#8a7d66;border-color:rgba(60,40,10,.12);box-shadow:var(--shadow)}
+html[data-finch=light] .rc,html[data-finch=light] .po-r{box-shadow:0 26px 54px rgba(80,55,20,.2),0 4px 12px rgba(80,55,20,.1)}
+html[data-finch=light] .rc{background:#fffaf0}
+
+/* type and buttons on gold */
+html[data-finch=light] :is(.btn.solid,.joinbar,.tt.on,.tl-jump button.on,.tabs button[aria-selected=true]){color:#fffaf0}
+html[data-finch=light] .tt.on span{color:#f6e6c6}
+html[data-finch=light] .bm.lit i{color:#fffaf0}
+html[data-finch=light] .joinbar{box-shadow:0 12px 30px rgba(80,55,20,.22)}
+
+/* lighting: gold glows become soft warm light, dark shadows become warm and low */
+html[data-finch=light] .glow{opacity:.5}
+html[data-finch=light] .rays{opacity:.55}
+html[data-finch=light] .hc{filter:drop-shadow(0 28px 36px rgba(90,60,20,.22))}
+html[data-finch=light] .bcoin,html[data-finch=light] .seal{box-shadow:0 10px 26px rgba(90,60,20,.3)}
+html[data-finch=light] .coin{box-shadow:0 8px 20px rgba(90,60,20,.3)}
+html[data-finch=light] .stick:after{background:linear-gradient(transparent,var(--ink))}
+html[data-finch=light] .tlab.lvl .tl-stage{box-shadow:0 0 80px rgba(199,154,79,.45)}
+html[data-finch=light] :is(.tlab,.yr,.calc,.tp,.btile,.brand,.ledger){box-shadow:0 18px 40px rgba(80,55,20,.07)}
+
+/* partner logos are white artwork: render them dark */
+html[data-finch=light] :is(.btile,.brand,.track) img{filter:invert(1) brightness(.28) sepia(.25)}
+
+/* the invitation becomes cream parchment */
+html[data-finch=light] .env-b{background:#efe3cc}
+html[data-finch=light] .env-f{background:linear-gradient(160deg,#f5ebd7,#e6d6b8)}
+html[data-finch=light] .env-t{background:linear-gradient(180deg,#f8efdd,#e9dcc0)}
+html[data-finch=light] :is(.env-b,.env-f,.env-t){border-color:var(--gold3)}
+html[data-finch=light] .invite{background:linear-gradient(170deg,#fffaf2,#f4ead8);box-shadow:0 40px 90px rgba(80,55,20,.22),0 0 0 1px rgba(199,154,79,.2)}
+
+/* theme toggle */
+.themebtn{width:46px;height:46px;display:grid;place-items:center;padding:0;border:1px solid var(--line);background:none;color:var(--gold2);cursor:pointer;transition:border-color .3s,color .3s;margin-left:10px}
+.themebtn:hover{border-color:var(--gold)}.themebtn svg{width:19px;height:19px}
+@media(max-width:1020px){.themebtn{margin-left:auto;margin-right:10px}.hud{right:128px}}
+@media(max-width:760px){.hud{right:124px}}
+html.theming *,html.theming *:before,html.theming *:after{transition:background-color .6s,color .6s,border-color .6s,box-shadow .6s!important}
+
+/* light-theme lighting: a visible sunburst, a warm halo and a parchment vignette */
+:root{--dust:#f0cd86}
+html[data-finch=light]{--dust:#a87a32}
+html[data-finch=light] .rays{opacity:1;background:repeating-conic-gradient(from 0deg,rgba(150,105,35,.17) 0 .55deg,transparent .55deg 7.5deg)}
+html[data-finch=light] .glow{opacity:1;background:radial-gradient(42% 46% at 50% 52%,rgba(240,196,110,.42),transparent 70%),radial-gradient(70% 55% at 50% 112%,rgba(214,166,82,.38),transparent 72%),radial-gradient(34% 40% at 88% 6%,rgba(244,117,34,.08),transparent 70%)}
+html[data-finch=light] [data-scene=open] .stick{background:radial-gradient(75% 70% at 50% 52%,#fffbf3 0%,#f6efe1 48%,#e9dcc3 100%)}
+html[data-finch=light] .stick:not(.dark) .glow{opacity:.9}
+html[data-finch=light] .page-hero .glow,html[data-finch=light] .cta .glow{opacity:1;background:radial-gradient(60% 70% at 50% 112%,rgba(214,166,82,.34),transparent 72%),radial-gradient(40% 40% at 10% 20%,rgba(240,196,110,.14),transparent 70%)}
+html[data-finch=light] .hc[data-real]:before{border-color:rgba(150,105,35,.45)}
+html[data-finch=light] .hc[data-real]:after{border-color:rgba(150,105,35,.22)}
+html[data-finch=light] .hc-line circle{stroke:#a87a32}
+html[data-finch=light] .hc{filter:drop-shadow(0 34px 34px rgba(110,72,18,.26)) drop-shadow(0 0 60px rgba(240,190,100,.35))}
+html[data-finch=light] .stick.dark{background:radial-gradient(70% 70% at 50% 50%,#fffaf1,#ece1cc)}
+/* header: menu sits on the right beside the theme button */
+.nav .wrap>nav{margin-left:auto}
+
+/* golden light rays radiating from the coin (light theme) */
+html[data-finch=light] [data-scene=open] .rays{left:50%;top:50%;bottom:auto;width:230vmax;height:230vmax;transform:translate(-50%,-50%);animation:lrays 140s linear infinite;
+  background:
+   repeating-conic-gradient(from 0deg,rgba(236,176,72,0) 0deg,rgba(236,176,72,.34) 2.2deg,rgba(236,176,72,0) 5deg,rgba(236,176,72,0) 11deg),
+   repeating-conic-gradient(from 4deg,rgba(255,214,140,0) 0deg,rgba(255,214,140,.42) 1.2deg,rgba(255,214,140,0) 3deg,rgba(255,214,140,0) 17deg),
+   repeating-conic-gradient(from 9deg,rgba(214,150,52,0) 0deg,rgba(214,150,52,.2) 4deg,rgba(214,150,52,0) 9deg,rgba(214,150,52,0) 23deg);
+  filter:blur(7px);opacity:1;mix-blend-mode:multiply;
+  -webkit-mask:radial-gradient(circle,#000 4%,rgba(0,0,0,.85) 16%,transparent 48%);mask:radial-gradient(circle,#000 4%,rgba(0,0,0,.85) 16%,transparent 48%)}
+@keyframes lrays{to{transform:translate(-50%,-50%) rotate(360deg)}}
+html[data-finch=light] [data-scene=open] .glow{background:radial-gradient(26% 30% at 50% 50%,rgba(255,226,160,.95),rgba(246,200,110,.45) 45%,transparent 75%),radial-gradient(60% 60% at 50% 50%,rgba(240,190,100,.28),transparent 70%),radial-gradient(70% 55% at 50% 112%,rgba(214,166,82,.3),transparent 72%)}
+html[data-finch=light] [data-scene=open] .stick{background:radial-gradient(80% 75% at 50% 50%,#fffaf0 0%,#f7eedb 45%,#eadbbd 100%)}
+@media(max-width:760px){html[data-finch=light] [data-scene=open] .rays{animation:none;filter:blur(5px)}}
+@media(prefers-reduced-motion:reduce){html[data-finch=light] [data-scene=open] .rays{animation:none}}
+/* rays without a costly blur: softness comes from the gradients themselves */
+html[data-finch=light] [data-scene=open] .rays{width:170vmax;height:170vmax;filter:none;mix-blend-mode:normal;will-change:transform;
+  background:
+   repeating-conic-gradient(from 0deg,rgba(236,176,72,0) 0deg,rgba(236,176,72,.12) 1deg,rgba(236,176,72,.3) 2.6deg,rgba(236,176,72,.12) 4.2deg,rgba(236,176,72,0) 5.4deg,rgba(236,176,72,0) 11deg),
+   repeating-conic-gradient(from 4deg,rgba(255,210,130,0) 0deg,rgba(255,210,130,.34) 1.4deg,rgba(255,210,130,0) 2.8deg,rgba(255,210,130,0) 17deg),
+   repeating-conic-gradient(from 9deg,rgba(214,150,52,0) 0deg,rgba(214,150,52,.08) 2deg,rgba(214,150,52,.16) 4.5deg,rgba(214,150,52,.08) 7deg,rgba(214,150,52,0) 9deg,rgba(214,150,52,0) 23deg)}
+@media(max-width:760px){html[data-finch=light] [data-scene=open] .rays{filter:none}}
+
+/* readability: deeper golds for text on ivory */
+html[data-finch=light]{--gold:#8a5f1f;--gold2:#6e4a16;--foil:linear-gradient(105deg,#6e4a16 0%,#9a6a24 30%,#7d5419 52%,#a87a32 72%,#6e4a16 100%)}
+html[data-finch=light] :is(.btn.solid,.joinbar,.tt.on,.tl-jump button.on,.tabs button[aria-selected=true],.way span:first-child,.nt,.bm.lit i){background:linear-gradient(105deg,#8a5f1f,#b8873a 40%,#9a6a24 60%,#8a5f1f);color:#fffaf0}
+html[data-finch=light] .ygrid .cash strong{color:var(--gold2)}
+html[data-finch=light] .hp>i{color:rgba(138,95,31,.3)}
+html[data-finch=light] .ygrid .dim strong{color:#8f846f}
+html[data-finch=light] .note{color:#5f5443}
+html[data-finch=light] .po-r{color:#2a2115}
+html[data-finch=light] :is(.btn.solid,.joinbar,.tt.on,.tl-jump button.on,.tabs button[aria-selected=true],.way span:first-child,.nt,.bm.lit i){background:linear-gradient(105deg,#74501a,#9a6c28 45%,#7d5419 70%,#6e4a16)}
+html[data-finch=light] .tt.on span{color:#fff3dc}
+html[data-finch=light] .po-stamp{color:#5e3f10}
+
+/* thin golden rays, same pattern and position as the dark theme */
+html[data-finch=light] [data-scene=open] .rays{left:50%;top:auto;bottom:-46%;width:1500px;height:1500px;transform:translateX(-50%);animation:spin 160s linear infinite;filter:none;mix-blend-mode:normal;opacity:1;
+  background:repeating-conic-gradient(from 0deg,rgba(184,128,40,.42) 0 .5deg,transparent .5deg 7.5deg);
+  -webkit-mask:radial-gradient(circle,#000 8%,transparent 66%);mask:radial-gradient(circle,#000 8%,transparent 66%)}
+html[data-finch=light] [data-scene=open] .glow{background:radial-gradient(60% 55% at 50% 112%,rgba(214,166,82,.32),transparent 70%),radial-gradient(34% 40% at 86% 6%,rgba(244,117,34,.06),transparent 70%)}
+html[data-finch=light] [data-scene=open] .stick{background:radial-gradient(80% 75% at 50% 50%,#fffaf1 0%,#f6efe1 55%,#ece0c8 100%)}
+html[data-finch=light] .hc{filter:drop-shadow(0 30px 34px rgba(110,72,18,.24))}
+@media(max-width:760px){html[data-finch=light] [data-scene=open] .rays{width:900px;height:900px;bottom:-20%;animation:none}}
+/* finer, brighter golden rays */
+html[data-finch=light] [data-scene=open] .rays{background:repeating-conic-gradient(from 0deg,rgba(236,178,58,.75) 0 .18deg,rgba(255,214,120,.35) .18deg .32deg,transparent .32deg 7.5deg)}
+/* tier cards: restore metal inks and lift the finish in light theme */
+html[data-finch=light] .tcard.silver{--ink2:#eef1f5;--mute:#c3c8d0}
+html[data-finch=light] .tcard.gold{--ink2:#f8e2ae;--mute:#d8bf8a}
+html[data-finch=light] .tcard.platinum{--ink2:#fff;--mute:#d6d9e0}
+html[data-finch=light] .tcard{filter:brightness(1.22) contrast(1.05)}
+html[data-finch=light] .tcard.gold{box-shadow:0 30px 60px rgba(70,45,10,.3),0 0 50px rgba(232,180,90,.35),inset 0 1px 0 rgba(255,240,210,.4)!important}
+html[data-finch=light] .tcard .tier{border-color:var(--ink2);color:var(--ink2)}
